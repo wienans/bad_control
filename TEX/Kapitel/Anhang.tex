@@ -1,0 +1,55 @@
+%!TEX root = ../main.tex
+
+\chapter{Anhang}
+\label{ch:Anhang}
+\section{Teststrecken}
+Um Regelkreise zu vergleichen, werden meistens ihre Sprungantworten betrachtet. Hierfür wurde eine gerade Fahrbahn aufgezeichnet, um die Ausregelung der Querabweichung durch einen Störsprung zu analysieren. 
+\begin{figure}[H]
+  \centering
+  \pgfimage[height=10cm]{./Bilder/Sprung_Strecke}
+  \caption[Erste Teststrecke]{Teststrecke, um die Störsprungantwort zu bestimmen}
+  \label{fig:Stoersprung}
+\end{figure}
+Das Modellfahrzeug wird mit einer bestimmten Querabweichung parallel zur Fahrbahn auf die Fahrbahn platziert und beim Losfahren wird die Regelung gestartet. Über die Software wird die gemessene Querabweichung geloggt und in eine Datei geschrieben.\\
+
+In \ref{fig:Rundkurs} ist die Teststrecke abgebildet, auf der die Fahrtests absolviert wurden. Sie ähnelt einem Elchtest, welcher seit einigen Jahren ein Standard Fahrdynamiktest ist. Die fehlende Außenlinie auf der Geraden soll ein Funktion der Fahrbahnerkennung aus \cite{Julius} testen, in der sie selbst mit nur einer Fahrspurlinie funk\-tioniert.
+\begin{figure}[H]
+  \centering
+  \pgfimage[width=.8\textwidth]{./Bilder/Rundkurs}
+  \caption[Zweite Teststrecke]{Rundkurs Teststrecke}
+  \label{fig:Rundkurs}
+\end{figure}
+\subsection*{Versuch zur Bestimmung der Querabweichungsgeschwindigkeit}
+Das Modellfahrzeug wurde in die Mitte der geraden Teststrecke aus \ref{fig:Stoersprung} gestellt. Es wurden jeweils Versuche beim Anfahren mit vollem Rechts- und Links\-einschlag ausgeführt. Die Querabweichung wurde durch ein Programm auf dem Raspberry Pi geloggt und in eine Datei geschrieben. Nachträglich wurde die Änderung der Querabweichung zwischen den Iterationsschritten berechnet.
+\section{Geschwindigkeitssensor}
+Der Hallsensor in \ref{fig:Hall} wird als Geschwindigkeitssensor benutzt. Er wird mit 5 V betrieben und schaltet seinen digitalen Ausgang durch den eingefügten Pull-Up Widerstand zwischen 0 V und 5 V.
+\begin{figure}[H]
+  \centering
+  \pgfimage[width=.7\textwidth]{./Bilder/Hallsensor}
+  \caption[Digitaler Hallsensor mit Pull-Up Widerstand]{Digitaler Hallsensor mit Pull-Up Widerstand Rot: 5 V \\
+  Schwarz: Masse Braun: Ausgangssignal}
+  \label{fig:Hall}
+\end{figure}
+Der Sensor wurde an der Hinterachse montiert. Der Abstand zu den Magneten zum Sensor wurde so gering wie möglich gehalten.
+\begin{figure}[H]
+  \centering
+  \pgfimage[width=.6\textwidth]{./Bilder/Hall_verbaut}
+  \caption[Verbauter Hallsensor]{Verbauter Hallsensor an der Hinterachse}
+  \label{fig:HallAuto}
+\end{figure}
+\section{Vollständige ROS Softwarearchitektur}
+\begin{figure}[H]
+  \centering
+  \pgfimage[width=1\textwidth]{./Bilder/ROS_Software}
+  \caption[Gesamte ROS Softwarearchitektur]{Gesamte ROS Softwarearchitektur}
+  \label{fig:HallAuto}
+\end{figure}
+\section{Inhalt der CD}
+Auf der beigelegten CD befinden sich folgende Dateien:
+\begin{compactitem}
+  \item Die Arbeit im PDF Format
+  \item Im Ordner 'Skripte' ist das erstellte Skript zur Berechnung der Reglerparameter auf Basis der Regelstreckenparameter gespeichert
+  \item Im Ordner 'MatLab' sind die in dieser Arbeit erstellten Simulationsdatein ge\-speich\-ert
+  \item Im Ordner 'Programmcode/Drive\_Pi' ist der Programmcode des mit dieser Arbeit erweiterten Modellfahrzeuges abgelegt.
+  \item Im Ordner 'Programmcode/ROS' ist der portierte Programmcode für die Regelung gespeichert.
+\end{compactitem}

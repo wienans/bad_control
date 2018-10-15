@@ -1,0 +1,72 @@
+\documentclass{scrbook} %Dokumentenklasse Buch
+
+\input{./Style/Style} % Style-Festlegen
+\input{./Style/Macros} % Neue Kurzbefehle
+\input{./Style/Trennung}%Trennung
+% PDF Titel und Autor setzen
+\hypersetup{
+  pdftitle={b.ad Regelung},
+  pdfauthor={Sven Wienand}
+}
+
+%\input{./Style/Schema-color} %Farbschema Festlegen
+\input{./Style/Schema-gray}
+
+\newcommand{\duedate}{31. Juli 2018}
+\newcommand{\dueplace}{Bochum}
+%Einzelne Seite zum Debugen includen
+%\includeonly{einleitung}
+
+\begin{document}
+  \frontmatter %Römische Seitenzahlen-Einleitung
+ 	\include{./Titel/Titel}
+
+  	\include{./Kapitel/Kurzfassung}
+%Inhaltsverzeichnis
+  \cleardoublepage %Zwingt auf neuer ungerader Seite anzufangen
+  \phantomsection %hyperref zuordnungshilfe für PDF
+  \pdfbookmark{Inhaltsverzeichnis}{tableofcontents}%PDF Link zur sektion
+  \tableofcontents %Erzeuge Inhaltsverzeichnis
+%Ende Inhaltsverzeichnis
+  \mainmatter % Hautteil
+  \include{./Kapitel/Einleitung}
+  \include{./Kapitel/Stand}
+
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{Literaturverzeichnis}
+  %\pdfbookmark{Literaturverzeichnis}{bibliography}
+  \bibliography{./Literatur/Literatur} %BibTeX Compilieren
+  \appendix % Beginn des Anhangs
+  %\backmatter % Nach dem Anhang alle Verzeichnisse
+
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+  %\pdfbookmark{Abbildungsverzeichnis}{listoffigures}
+  \listoffigures
+
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{Tabellenverzeichnis}
+  %\pdfbookmark{Tabellenverzeichnis}{listoftables}
+  \listoftables
+
+  %\cleardoublepage
+  %\phantomsection
+  %\pdfbookmark{Definitions- und Theoremverzeichnis}{listoftheorems}
+  %\renewcommand{\listtheoremname}{Definitions- und Theoremverzeichnis}
+  %\listoftheorems[ignoreall,show={Lemma,Theorem,Korollar,Definition}]
+
+  %\cleardoublepage
+  %\phantomsection
+  %\pdfbookmark{Quelltextverzeichnis}{listoflistings}
+  %\lstlistoflistings
+
+  \include{./Kapitel/Abkuerzungen}
+
+  
+
+  \include{./Kapitel/Anhang}
+
+\end{document}

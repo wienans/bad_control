@@ -1,0 +1,16 @@
+%!TEX root = ../main.tex
+
+\cleardoublepage
+\thispagestyle{plain}
+
+\pdfbookmark{Kurzfassung}{kurzfassung}
+\paragraph{Kurzfassung}
+In dieser Arbeit wird eine Fahrzeugregelung für ein spurgeführtes Modellfahrzeug entwickelt, welches mit einer kamerabasierten Fahrbahnerkennung und einer ultraschallbasierten Abstandsmessung zu potenziell vorher fahrenden Fahr\-zeu\-gen, parkenden Fahrzeugen oder Objekten ausgestattet ist. \\
+
+Hierfür wird zu erst ein Überblick über die vorhandenen Hardware gegeben und die Systemarchitektur beschrieben. Im Anschluss daran werden die für die Regelung notwendigen regelungstechnischen und systemtechnischen Grundlagen angeführt und erklärt.\\
+
+Die Querdynamik des Fahrzeuges wurde aufgrund fehlender Möglichkeiten, die Parameter des linearen Einspurmodells zu bestimmen, durch Testaufbauten \mbox{selbst} modelliert. Nach Auswahl des Regelverfahrens wurde ein PID-Regelalgorithmus erarbeitet und durch zwei Verfahren parametriert. Im Anschluss daran werden praktische Versuchsfahrten mit Simulationsergebnissen verglichen und analysiert.\\
+
+Die Geschwindigkeitsregelung konnte wegen mechanischer Einschränkungen nur als Zweipunktregler ausgelegt werden. Die hierfür notwendige Ge\-schwindigkeits\-messung wurde mit einem Hallsensor realisiert. Als mögliche Erweiterung der Ge\-schwin\-dig\-keits\-messung wurde eine Sensor-Fusion von Beschleunigungs- und Ge\-schwin\-digkeits\-sensoren mithilfe eines Kalman-Filters erarbeitet und in Matlab simuliert.\\
+
+Für eine zweite Version des Modellfahrzeuges wurde eine neue Systemarchitektur auf der Basis des Robot Operating System entwickelt. Der in dieser These er\-ar\-bei\-tete Regelalgorithmus wird in die ROS Umgebung portiert und ein Entwicklertest durchgeführt.
