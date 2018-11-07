@@ -11,5 +11,6 @@
 *.out
 *.toc
 *.tdo
-*.lol
+*.lol*.synctex.gz
 # Generated main.pdf 
+*.pdf
