@@ -20,7 +20,6 @@
 \begin{document}
   \frontmatter %Römische Seitenzahlen-Einleitung
  	\include{./Titel/Titel}
- 	
   	\include{./Kapitel/Kurzfassung}
 %Inhaltsverzeichnis
   \cleardoublepage %Zwingt auf neuer ungerader Seite anzufangen
@@ -63,17 +62,17 @@
   %\phantomsection
   %\pdfbookmark{Quelltextverzeichnis}{listoflistings}
   %\lstlistoflistings
-
+ 
   \include{./Kapitel/Abkuerzungen}
-%Symbolverzeichnis
-\cleardoublepage
-\phantomsection 
-\addcontentsline{toc}{chapter}{Symbolverzeichnis}
-\renewcommand{\nomname}{Symbolverzeichnis}
-\input{./Kapitel/Symbolverzeichnis.tex} %Datei mit Einträgen, alternativ können diese auch innerhalb der Datei an entsprechender Stelle gemacht werden
-\printnomenclature
-\newpage
+  %Symbolverzeichnis
+  \cleardoublepage
+  \phantomsection
+  \addcontentsline{toc}{chapter}{Symbolverzeichnis}
+  \renewcommand{\nomname}{Symbolverzeichnis}
+  \input{./Kapitel/Symbolverzeichnis.tex} %Datei mit Einträgen, alternativ können diese auch innerhalb der Datei an entsprechender Stelle gemacht werden
+  \printnomenclature
+  \newpage
 %Ende Symbolverzeichnis
-  
+
 
 \end{document}

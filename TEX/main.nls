@@ -1,0 +1,19 @@
+\begin{thenomenclature} 
+
+ \nomgroup{Symbols}
+
+  \item [{$\mathbb{R}$}]\begingroup Reelle Zahlen\nomeqref {\relax .0}
+		\nompageref{17}
+  \item [{$\mathbb{N}$}]\begingroup Natürliche Zahlen\nomeqref {\relax .0}
+		\nompageref{17}
+  \item [{$\mathbb{Z}$}]\begingroup Ganze Zahlen\nomeqref {\relax .0}
+		\nompageref{17}
+  \item [{$\mathbb{B}$}]\begingroup Boolsche Variable\nomeqref {\relax .0}
+		\nompageref{17}
+  \item [{$x$}]\begingroup Skalar\nomeqref {\relax .0}\nompageref{17}
+  \item [{$\textbf{\textit{x}}$}]\begingroup Vektor\nomeqref {\relax .0}
+		\nompageref{17}
+  \item [{$\textbf{\textit{X}}$}]\begingroup Matrix\nomeqref {\relax .0}
+		\nompageref{17}
+
+\end{thenomenclature}
